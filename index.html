@@ -596,7 +596,7 @@
       <div class="cross-div"><span class="ln"></span><svg viewBox="0 0 24 34" xmlns="http://www.w3.org/2000/svg"><path d="M12 3 V31 M5 12 H19"/></svg><span class="ln"></span></div>
       <h2>Ainda na <span class="key">dúvida</span>?</h2>
     </div>
-    <div class="faq reveal d1" id="faq">
+    <div class="faq reveal d1" id="faqList">
       <div class="q"><div class="q-head">"Eu não tenho tempo nem pra isso." <span class="q-plus">+</span></div><div class="q-body"><p>Esse método foi feito exatamente para você. São 5 minutos — menos do que você passa rolando o feed. E nos dias impossíveis, você aprende a fazer uma versão ainda mais curta, sem culpa.</p></div></div>
       <div class="q"><div class="q-head">"Já tentei várias vezes e sempre desisto." <span class="q-plus">+</span></div><div class="q-body"><p>Você não desistiu por falta de fé — desistiu por falta de método e pelo peso da culpa. O Módulo 1 e o Plano de 30 Dias existem justamente para quebrar esse ciclo.</p></div></div>
       <div class="q"><div class="q-head">"Sou iniciante e não entendo a Bíblia." <span class="q-plus">+</span></div><div class="q-body"><p>Perfeito ponto de partida. O Módulo 4 ensina um jeito simples de entender o que você lê, sem termos complicados e sem precisar de formação teológica.</p></div></div>
@@ -759,10 +759,10 @@
   });
 
   /* faq accordion */
-  document.querySelectorAll('#faq .q').forEach(q=>{
+  document.querySelectorAll('#faqList .q').forEach(q=>{
     q.querySelector('.q-head').addEventListener('click',()=>{
       const open=q.classList.contains('open');
-      document.querySelectorAll('#faq .q').forEach(x=>{x.classList.remove('open');x.querySelector('.q-body').style.maxHeight=null;});
+      document.querySelectorAll('#faqList .q').forEach(x=>{x.classList.remove('open');x.querySelector('.q-body').style.maxHeight=null;});
       if(!open){q.classList.add('open');const b=q.querySelector('.q-body');b.style.maxHeight=b.scrollHeight+'px';}
     });
   });
